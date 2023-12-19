@@ -1,0 +1,15 @@
+[core]
+        ignorecase = false
+[alias]
+        co = checkout
+        cob = checkout -b
+        cm = commit
+        br = branch
+        brd = branch -D
+        st = status
+        ps = push
+        cp = cherry-pick
+        psu = !git push -u origin $(git branch | awk -F\"*\" '{print $2}')
+        psf = !git push --force-with-lease origin $(git branch | awk -F\"*\" '{print $2}')
+        sup = !git submodule sync && git submodule update --init --recursive
+        last = !git --no-pager log -1
